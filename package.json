@@ -1,0 +1,19 @@
+{
+  "name": "ec2-scheduler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "aws-sdk": "^2.5.5",
+    "bluebird": "^3.4.6",
+    "cron": "^1.0.9",
+    "lodash": "^4.15.0",
+    "logger": "github:pterwin/logger"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erwin Atuli",
+  "license": "ISC"
+}
