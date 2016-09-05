@@ -86,4 +86,6 @@
             },null, true, config.timezone);
         };
     };
+
+    module.exports = Scheduler;
 })();
