@@ -1,12 +1,11 @@
 (function() {
     "use strict";
-    var cron   = require('cron');
-    var config = require('./config/config.js');
-    var Logger = require('logger');
-    var logger = new Logger('ec2-scheduler');
-    var _      = require('lodash')._;
+    var cron    = require('cron');
+    var Logger  = require('logger');
+    var logger  = new Logger('ec2-scheduler');
+    var _       = require('lodash')._;
     var Promise = require('bluebird');
-    var AWS = require('aws-sdk');
+    var AWS     = require('aws-sdk');
 
 
     var EC2Control = function(config) {
@@ -79,7 +78,6 @@
         };
 
 
-
         self.schedule = function(config) {
             logger.info('scheduling ', config.cron, config.instances);
             var job = new cron.CronJob(config.cron, function() {
@@ -88,14 +86,4 @@
             },null, true, config.timezone);
         };
     };
-
-
-
-
-
-    var sch = new Scheduler(config);
-    sch.start();
-
-
-
 })();
